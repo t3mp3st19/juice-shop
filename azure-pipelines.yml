@@ -13,6 +13,7 @@ pool:
 steps:
 - task: SonarQubePrepare@5
   inputs:
+    SonarQube: 'SonarQube container connection'
     scannerMode: 'CLI'
     configMode: 'manual'
     cliProjectKey: 'juicy'
