@@ -13,9 +13,11 @@ pool:
 steps:
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'SonarQube container connection'
     scannerMode: 'CLI'
-    configMode: 'file'
+    configMode: 'manual'
+    cliProjectKey: 'juicy'
+    cliProjectName: 'juicy'
+    cliSources: '.'
 - task: NodeTool@0
   inputs:
     versionSpec: '16.15.0'
